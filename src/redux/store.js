@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import cartSlice from './slices/cartSlice';
 // import productsSlice from './slices/productsSlice';
-import contactReducer from './slices/contactSlice';  // Thêm dòng này
+import contactReducer from './slices/contactSlice'; 
 import orderReducer from './slices/orderSlice';
 import userReducer from "./slices/userSlice";
 import productsReducer from './slices/productsSlice';

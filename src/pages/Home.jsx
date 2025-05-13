@@ -34,14 +34,14 @@ const Home = () => {
           ))}
         </div> */}
       <div className='py-10 py-20'>
-        <h2 className='text-center text-3xl font-black text-white font-sans'>CHÚNG TÔI LƯU GIỮ KỶ NIỆM CỦA BẠN TRÊN CHIẾC ÁO PHÔNG</h2>
+        <h2 className='text-center text-3xl font-black text-white font-sans'>CHÚNG TÔI LƯU GIỮ KỶ NIỆM CỦA BẠN TRÊN NHỮNG MIẾNG DECAL</h2>
         <div className="bg-black min-h-screen flex items-center justify-center">
           <ProductGrid />
         </div>
         <div className='py-10'>
-          <h2 className='text-center text-3xl font-black text-white font-sans'>SẢN XUẤT ĐỒNG PHỤC</h2>
+          <h2 className='text-center text-3xl font-black text-white font-sans'>SẢN XUẤT DECAL</h2>
           <div className="border-t-2 border-white  w-64 my-3 mx-auto"></div>
-          <h2 className='text-center text-l  text-white font-sans'>Potato Clothing thiết kế và sản xuất nhiều loại sản phẩm đồng phục thẩm mỹ, chất lượng.</h2>
+          <h2 className='text-center text-l  text-white font-sans'>Potato Decal thiết kế và sản xuất nhiều loại sản phẩm decal thẩm mỹ, chất lượng.</h2>
           <ProductGrid2 />
 
         </div>

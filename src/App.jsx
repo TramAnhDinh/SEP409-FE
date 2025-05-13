@@ -20,7 +20,7 @@ import MemberPage from './pages/MemberPage';
 import OrderDetail from './pages/OrderDetail';
 
 import NewProductCarousel from './components/NewProductCarousel';
-import ContactPage from './pages/ContactPage';  // Đã có rồi, không cần thêm nữa
+import ContactPage from './pages/ContactPage'; 
 import PricingTable from './pages/PricingTable';
 import PricingClass from './pages/PricingClass';
 import PricingAccessory from './pages/PricingAccessory';
