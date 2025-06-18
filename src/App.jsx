@@ -49,20 +49,36 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   }
   
   // Chuyển đổi role string thành roleId tương ứng
+  // let roleId;
+  // switch(role) {
+  //   case "admin":
+  //     roleId = "ROLE_ADMIN";
+  //     break;
+  //   case "manager":
+  //     roleId = "ROLE_MANAGER";
+  //     break;
+  //   case "designer":
+  //     roleId = "ROLE_DESIGNER";
+  //     break;
+  //   default:
+  //     roleId = 0; // Không có quyền
+  // }
+
   let roleId;
-  switch(role) {
-    case "admin":
-      roleId = "ROLE_ADMIN";
-      break;
-    case "manager":
-      roleId = "ROLE_MANAGER";
-      break;
-    case "designer":
-      roleId = "ROLE_DESIGNER";
-      break;
-    default:
-      roleId = 0; // Không có quyền
-  }
+switch (role) {
+  case "admin":
+    roleId = "ROLE_ADMIN";
+    break;
+  case "manager":
+    roleId = "ROLE_MANAGER";
+    break;
+  case "designer":
+    roleId = "ROLE_DESIGNER";
+    break;
+  default:
+    roleId = localStorage.getItem("userRole"); // fallback nếu không phải 3 role chính
+}
+
   
   if (!allowedRoles.includes(roleId)) {
     console.log(`Access denied: User role ${role} (${roleId}) not in allowed roles ${allowedRoles}`);
@@ -106,13 +122,13 @@ const AppContent = () => {
           {/* <Route path="/order-detail" element={<OrderDetail />} /> */}
 
           {/* Protected routes for Staff (roleId = 2) */}
-          <Route path="/staff" element={<ProtectedRoute allowedRoles={[2]}><StaffPage /></ProtectedRoute>} />
-          <Route path="/order-tracking/" element={<ProtectedRoute allowedRoles={[2]}><OrderTracking /></ProtectedRoute>} />
-          <Route path="/order-detail/:orderId" element={<ProtectedRoute allowedRoles={[2]}><OrderDetail /></ProtectedRoute>} />
+          <Route path="/staff" element={<ProtectedRoute allowedRoles={["ROLE_MANAGER"]}><StaffPage /></ProtectedRoute>} />
+          <Route path="/order-tracking/" element={<ProtectedRoute allowedRoles={["ROLE_MANAGER"]}><OrderTracking /></ProtectedRoute>} />
+          <Route path="/order-detail/:orderId" element={<ProtectedRoute allowedRoles={["ROLE_MANAGER"]}><OrderDetail /></ProtectedRoute>} />
           {/* <Route path="/member" element={<ProtectedRoute allowedRoles={[2]}><MemberPage /></ProtectedRoute>} /> */}
            {/* <Route path="/order-tracking/:orderId" element={<ProtectedRoute allowedRoles={[2]}><OrderTracking /></ProtectedRoute>} /> */}
 
-           <Route path="/member" element={<ProtectedRoute allowedRoles={[2, 3]}><MemberPage /></ProtectedRoute>} />
+           <Route path="/admin" element={<ProtectedRoute allowedRoles={["ROLE_ADMIN"]}><MemberPage /></ProtectedRoute>} />
 
           {/* Protected routes for Member (roleId = 3) */}
           {/* <Route path="/member" element={<ProtectedRoute allowedRoles={[3]}><MemberPage /></ProtectedRoute>} /> */}

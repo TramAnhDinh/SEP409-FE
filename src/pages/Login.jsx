@@ -261,6 +261,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setUser } from "../redux/slices/userSlice";
+// import { loginSuccess } from "../redux/slices/userSlice";
 import { loadUserCart } from "../redux/slices/cartSlice";
 import axios from "axios";
 import { FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -293,14 +294,12 @@ const Login = () => {
         }
       );
 
-
-
       const token = response.data?.token || response.data; // tùy API trả về
       const tokenParts = token.split(".");
       const payload = JSON.parse(atob(tokenParts[1]));
       // const role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
       const role = payload.role;
-
+      
       dispatch(setUser({ token, role, username }));
       dispatch(loadUserCart());
       console.log("Decoded payload:", payload);
@@ -308,7 +307,7 @@ const Login = () => {
 
       await new Promise(resolve => setTimeout(resolve, 2000));
 
-      if (role === "staff") {
+      if (role === "manager") {
         navigate("/order-tracking");
       } else {
         navigate("/");

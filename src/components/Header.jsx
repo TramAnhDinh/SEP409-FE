@@ -152,7 +152,7 @@ const Header = () => {
 
             <Link to="/lien-he" className="hover:text-orange-400 text-xl">LIÊN HỆ</Link>
             <Link to="/cart" className="hover:text-orange-400 relative">
-              <ShoppingCart />
+              {/* <ShoppingCart /> */}
               {cartItemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs px-2">
                   {cartItemCount}
@@ -169,8 +169,11 @@ const Header = () => {
               {username || "TRANG CÁ NHÂN"} <ChevronDown className="ml-2" />
             </button>
             <div className="absolute right-0 top-full w-48 bg-black border border-gray-700 rounded-lg hidden group-hover:block z-50">
-              {role === "member" && <Link to="/member" className="block px-4 py-2 hover:bg-gray-800">TRANG CÁ NHÂN</Link>}
-              {role === "staff" && <Link to="/member" className="block px-4 py-2 hover:bg-gray-800">TRANG CÁ NHÂN</Link>}
+              {role === "ROLE_ADMIN" && <Link to="/member" className="block px-4 py-2 hover:bg-gray-800">TRANG CÁ NHÂN</Link>}
+              {role === "ROLE_MANAGER" && <Link to="/member" className="block px-4 py-2 hover:bg-gray-800">TRANG CÁ NHÂN</Link>}
+              {role === "ROLE_DESIGNER" && <Link to="/member" className="block px-4 py-2 hover:bg-gray-800">TRANG CÁ NHÂN</Link>}
+              {/* Nút Đăng Ký hiện sau khi đã login */}
+              <Link to="/register" className="block px-4 py-2 hover:bg-gray-800">ĐĂNG KÝ</Link>
               <button onClick={handleLogout} className="block w-full text-left px-4 py-2 hover:bg-gray-800">ĐĂNG XUẤT</button>
             </div>
           </div>
