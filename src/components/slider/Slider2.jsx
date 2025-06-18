@@ -12,30 +12,30 @@ const data = [
   {
     id: 1,
     img: banner1,
-    title: "Công Ty MobiFone",
+    title: "Đại diện Công ty Vận tải Phú Minh",
     content:
-      "Đặt đồng phục cho công ty tại Potato Clothing, mình hoàn toàn yên tâm về chất lượng...",
+      "Chúng tôi đặt in decal đồng bộ cho đội xe công ty. Sản phẩm rất chuyên nghiệp, keo dán bám tốt, không phai màu dưới mưa nắng. Dịch vụ nhanh gọn, đúng tiến độ",
   },
   {
     id: 2,
     img: banner2,
-    title: "11A4 - Phan Đình Phùng",
+    title: "Trần Ngọc Huy",
     content:
-      "Chất áo 10 điểm không có nhưng, đẹp xuất sắc! Mặc lên chụp kỷ yếu bao đỉnh...",
+      "Mình cực kỳ hài lòng với chất lượng decal! Màu in rõ nét, dán lên xe không bị bong tróc, lại còn được tư vấn tận tình. Lần sau chắc chắn sẽ ủng hộ tiếp!",
   },
   {
     id: 3,
     img: banner3,
-    title: "12A7 - THPT Trung Vương",
+    title: "Trọng Đức",
     content:
-      "Áo đẹp xuất sắc, form chuẩn. Ưng nhất là tư vấn nhiệt tình, dễ thương cực luôn...",
+      "Tem dán thiết kế riêng đúng chuẩn gu cá nhân! Màu sắc lên cực chuẩn, dán vừa khít không bị nhăn. Đi tour mưa nắng vẫn không tróc – quá hài lòng!",
   },
   {
     id: 4,
     img: banner4,
-    title: "12A7 - THPT Trung Vương",
+    title: "Nguyễn Minh Tâm",
     content:
-      "Áo đẹp xuất sắc, form chuẩn. Ưng nhất là tư vấn nhiệt tình, dễ thương cực luôn...",
+      "Mình đặt decal dán xe theo mẫu hình mình tự chọn, lên màu rất chuẩn. Shop hỗ trợ chỉnh ảnh kỹ, chọn chất liệu phù hợp nữa. Rất hài lòng!",
   },
 ];
 

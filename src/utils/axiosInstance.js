@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://phamdangtuc-001-site1.ntempurl.com/api',
+  // baseURL: 'https://phamdangtuc-001-site1.ntempurl.com/api',
+  baseURL: 'https://decalxeapi-backend-production.up.railway.app/api',
 });
 
 // Thêm interceptor để tự động thêm token vào header
